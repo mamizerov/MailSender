@@ -1,0 +1,48 @@
+﻿<Window x:Name="frmMain" x:Class="MailSender.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MailSender"
+        mc:Ignorable="d"
+        Title="Рассыльщик" Height="357.692" Width="582.545" WindowStartupLocation="CenterScreen" Background="#FF3D3E42" WindowStyle="ToolWindow">
+    <DockPanel Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Margin="0,0,2,-2">
+        <Menu x:Name="menuMain" DockPanel.Dock="Top" Height="27" VerticalAlignment="Top">
+            <MenuItem x:Name="mnFile" Header="Файл">
+                <MenuItem x:Name="mnExit" Header="Выход" HorizontalAlignment="Left" Height="25" Width="98" Click="mnExit_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="mnHelp" Header="Помощь" Click="mnHelp_Click"/>
+
+        </Menu>
+        <TabControl x:Name="tabMenu" DockPanel.Dock="Top" Margin="0">
+            <TabItem Header="Формирование группы рассылки">
+            </TabItem>
+
+            <TabItem Header="Планировщик">
+                <TextBlock TextWrapping="Wrap" Margin="88,30,320,63"><InlineUIContainer>
+                        <Label Content="Тема "/></InlineUIContainer><InlineUIContainer> <TextBox x:Name="txtThema" Height="23" TextWrapping="Wrap" Width="162" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,0,0"/>
+                    </InlineUIContainer><InlineUIContainer>
+                        <Label Content="Текст"/>
+                    </InlineUIContainer><InlineUIContainer>
+                        <TextBox x:Name="txtText" Height="23" TextWrapping="Wrap" Width="162" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+                    </InlineUIContainer><InlineUIContainer>
+                        <Label Content="Пароль"/>
+                    </InlineUIContainer><InlineUIContainer>
+                        <PasswordBox x:Name="txtPassword" Width="162"/>
+                    </InlineUIContainer><InlineUIContainer>
+                        <Button x:Name="btSend" Content="Отправить" Width="75" HorizontalAlignment="Right" Margin="85,10,0,0" Click="btSend_Click"/>
+                    </InlineUIContainer></TextBlock>
+
+            </TabItem>
+
+            <TabItem Header="Редактор писем">
+            </TabItem>
+
+            <TabItem Header="Статистика">
+            </TabItem>
+
+
+        </TabControl>
+    </DockPanel>
+</Window>
+    
